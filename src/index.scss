@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background;
+}
+
+@layer components {
+  @variants responsive {
+    .banner-shadow {
+      @apply relative;
+
+      &::before,
+      &::after {
+        content: '';
+        @apply absolute w-1/2 top-full h-full -z-1 bg-bannerShadow bg-contain bg-center bg-no-repeat transform -translate-y-0.6;
+      }
+
+      &::before {
+        @apply left-0;
+      }
+
+      &::after {
+        @apply right-0 -scale-x-100;
+      }
+    }
+  }
+}

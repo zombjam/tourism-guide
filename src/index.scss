@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-background;
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+  body {
+    @apply bg-background;
+  }
+  #app {
+    @apply h-auto min-h-full;
+  }
 }
 
 @layer components {

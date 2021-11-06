@@ -1,18 +1,20 @@
-import React, { Suspense, lazy, Fragment } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React, { Suspense, lazy } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-const Home = lazy(() => import('./routes/Home'))
+import Layout from './layout/Layout'
+import Home from './routes/Home'
+// const Home = lazy(() => import('./routes/Home'))
 
 const App = () => (
-  <Fragment>
-    <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          <Route exact path='/' component={Home}></Route>
-        </Switch>
-      </Suspense>
-    </Router>
-  </Fragment>
+  <Router>
+    <Layout>
+      {/* <Suspense fallback={<div>Loading...</div>}> */}
+      <Routes>
+        <Route exact path='/' element={<Home />}></Route>
+      </Routes>
+      {/* </Suspense> */}
+    </Layout>
+  </Router>
 )
 
 export default App

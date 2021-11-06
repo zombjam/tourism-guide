@@ -1,3 +1,4 @@
+const path = require('path')
 const paths = require('./paths')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
@@ -43,17 +44,28 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        use: ['babel-loader'],
       },
       {
         test: /\.(css|scss|sass)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-          'postcss-loader',
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
+          },
+          { loader: 'postcss-loader' },
+          {
+            loader: 'sass-loader',
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          { loader: 'postcss-loader' },
         ],
       },
 
@@ -62,7 +74,12 @@ module.exports = {
     ],
   },
   resolve: {
+    // allows us to do absolute imports from "src"
+    modules: [path.resolve(__dirname, paths.src), 'node_modules'],
     extensions: ['*', '.js', '.jsx'],
+    alias: {
+      apiConfig: path.resolve(__dirname, '../apiConfig.js'),
+    },
   },
   devServer: {
     port: 3000,

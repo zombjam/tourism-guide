@@ -19,6 +19,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         bannerShadow: "url('./assets/icons/box-shadow.svg')",
+        homeLogo: "url('./assets/images/home.svg')",
+        homeBg: "url('./assets/images/homeBg.png')",
       },
       screens: {
         'max-sm': { max: '639px' },
@@ -36,6 +38,7 @@ module.exports = {
       },
       zIndex: {
         '-1': -1,
+        1: 1,
       },
       translate: {
         '-0.6': '-60%',

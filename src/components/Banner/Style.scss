@@ -1,0 +1,31 @@
+.bannerLogo {
+  @apply hidden;
+}
+
+.bannerBg {
+  > div {
+    @apply pt-2 pb-5 px-4;
+  }
+}
+
+@screen md {
+  .bannerWrapper {
+    @apply pt-2 pb-6 px-6;
+  }
+  .bannerBg {
+    height: 496px;
+    @apply bg-homeBg bg-no-repeat bg-cover bg-center;
+  }
+  .bannerLogo {
+    @apply block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner-shadow {
+    &::before,
+    &::after {
+      background-position-y: 15px;
+    }
+  }
+}

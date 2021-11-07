@@ -42,19 +42,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader'],
-      },
-      {
         test: /\.(css|scss|sass)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: { importLoaders: 1 },
+            options: {
+              importLoaders: 2,
+              url: false,
+            },
           },
-          { loader: 'postcss-loader' },
+          {
+            loader: 'postcss-loader',
+          },
           {
             loader: 'sass-loader',
           },
@@ -64,13 +64,18 @@ module.exports = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
+          },
           { loader: 'postcss-loader' },
         ],
       },
-
-      // Images: Copy image files to build folder
-      { test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i, type: 'asset' },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
     ],
   },
   resolve: {

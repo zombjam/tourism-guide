@@ -18,9 +18,15 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        bannerShadow: "url('./assets/icons/box-shadow.svg')",
-        homeLogo: "url('./assets/images/home.svg')",
-        homeBg: "url('./assets/images/homeBg.png')",
+        bannerShadow: "url('/assets/icons/box-shadow.svg')",
+        homeLogo: "url('/assets/images/home.svg')",
+        homeBg: "url('/assets/images/homeBg.png')",
+        iconGPS: "url('/assets/icons/GPS.svg')",
+        iconSearch: "url('/assets/icons/search.svg')",
+        dropdown: "url('/assets/icons/dropdown.svg')",
+      },
+      boxShadow: {
+        base: '0px 2px 4px rgb(13 11 12 / 20%)',
       },
       screens: {
         'max-sm': { max: '639px' },

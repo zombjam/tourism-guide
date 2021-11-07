@@ -1,16 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { menus } from 'shared/constants/menu'
 
 const Header = () => {
-  const menus = [
-    { link: '/view', name: '台灣景點', color: 'pink', icon: 'spot' },
-    { link: '/food', name: '美食住宿', color: 'yellow', icon: 'lodging' },
-    { link: '/traffic', name: '景點交通', color: 'green', icon: 'traffic' },
-  ]
-
   return (
     <header className='bg-white'>
-      <div className='container 2xl:max-w-7xl mx-auto md:px-6 pad:banner-shadow flex items-end justify-between max-sm:justify-center pt-2 pb-3'>
+      <div className='container 2xl:max-w-7xl mx-auto md:px-6 flex items-end justify-between max-sm:justify-center pt-2 pb-3'>
         <Link to='/'>
           <img className='w-24' src='./assets/logo.svg' alt='logo' />
         </Link>

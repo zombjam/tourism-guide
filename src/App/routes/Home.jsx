@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import { Banner } from 'components'
 
 const Home = () => {
-  return <Banner />
+  return (
+    <Fragment>
+      <Banner />
+    </Fragment>
+  )
 }
 
 export default Home

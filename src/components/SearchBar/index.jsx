@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 import { mobileMenu } from 'shared/constants/menu'
+import Icon from '../Icon'
 import Select from '../Select'
 
 const SearchBar = () => {
@@ -18,14 +19,20 @@ const SearchBar = () => {
         />
         <button
           type='button'
-          className='text-white bg-pink w-10 h-10 rounded-md bg-iconSearch bg-no-repeat bg-center'
-        ></button>
+          className='text-white bg-pink w-10 h-10 rounded-md flex items-center justify-center'
+          aria-label='搜尋 search'
+        >
+          <Icon label='search' />
+        </button>
       </div>
       <div className='sm:hidden relative'>
         <button
           type='button'
-          className='text-white bg-pink w-10 h-10 rounded-md bg-iconSearch bg-no-repeat bg-center absolute right-0 -top-14'
-        ></button>
+          className='text-white bg-pink w-10 h-10 rounded-md flex items-center justify-center absolute right-0 -top-14'
+          aria-label='搜尋 search'
+        >
+          <Icon label='search' />
+        </button>
         <ul className='shadow-base rounded-md p-2 flex items-center justify-around'>
           {mobileMenu.map((item) => (
             <li key={item.name}>
@@ -47,8 +54,10 @@ const SearchBar = () => {
         </div>
         <button
           type='button'
-          className='text-white bg-yellow w-10 h-10 rounded-md bg-iconGPS bg-no-repeat bg-center'
-        ></button>
+          className='text-white bg-yellow w-10 h-10 flex items-center justify-center rounded-md'
+        >
+          <Icon label='GPS' />
+        </button>
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ import Header from './Header'
 const Layout = ({ children }) => (
   <Fragment>
     <Header></Header>
-    {children}
+    <div className='h-full pb-16'>{children}</div>
     <Footer></Footer>
   </Fragment>
 )

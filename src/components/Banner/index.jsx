@@ -5,7 +5,7 @@ import SearchBar from '../SearchBar'
 import './Style.scss'
 
 const Banner = () => (
-  <div className='bannerWrapper bg-white banner-shadow'>
+  <div className='bannerWrapper bg-white banner-shadow mb-20'>
     <div className='bannerBg'>
       <div className='relative h-full md:inline-flex px-2 flex-col justify-center left-1/2 transform -translate-x-1/2'>
         <div className='bannerLogo mb-2'>

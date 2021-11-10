@@ -6,5 +6,5 @@ body {
   @apply bg-background;
 }
 #app {
-  @apply h-auto min-h-full;
+  @apply h-auto min-h-full relative;
 }

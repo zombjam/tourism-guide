@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react'
 
-import { Banner } from 'components'
+import { Banner, PopularCity } from 'components'
 
 const Home = () => {
   return (
     <Fragment>
       <Banner />
+      <PopularCity />
     </Fragment>
   )
 }

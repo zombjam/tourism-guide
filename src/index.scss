@@ -3,11 +3,11 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
-  @import './scss/base';
+  @import './assets/scss/base';
 }
 
 @layer utilities {
   @variants responsive {
-    @import './scss/utility';
+    @import './assets/scss/utility';
   }
 }

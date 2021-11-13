@@ -17,22 +17,15 @@ const SearchBar = () => {
           type='text'
           placeholder='搜尋關鍵字'
         />
-        <button
-          type='button'
-          className='text-white bg-pink w-10 h-10 rounded-md flex items-center justify-center'
-          aria-label='搜尋 search'
-        >
-          <Icon label='search' />
-        </button>
       </div>
       <div className='sm:hidden relative'>
-        <button
+        {/* <button
           type='button'
           className='text-white bg-pink w-10 h-10 rounded-md flex items-center justify-center absolute right-0 -top-14'
           aria-label='搜尋 search'
         >
           <Icon label='search' />
-        </button>
+        </button> */}
         <ul className='shadow-base rounded-md p-2 flex items-center justify-around'>
           {mobileMenu.map((item) => (
             <li key={item.name}>
@@ -52,11 +45,18 @@ const SearchBar = () => {
           <Select className='w-1/2' />
           <Select className='w-1/2' />
         </div>
-        <button
+        {/* <button
           type='button'
           className='text-white bg-yellow w-10 h-10 flex items-center justify-center rounded-md'
         >
           <Icon label='GPS' />
+        </button> */}
+        <button
+          type='button'
+          className='text-white bg-pink w-10 h-10 rounded-md flex items-center justify-center'
+          aria-label='搜尋 search'
+        >
+          <Icon label='search' />
         </button>
       </div>
     </div>

@@ -3,3 +3,65 @@
   grid-template-rows: repeat(2, 123px);
   @apply grid grid-flow-col gap-3;
 }
+
+$galleryHeight: 270px;
+
+.gallery {
+  height: calc(#{$galleryHeight} + 4px);
+
+  > * {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
+
+  [class*='box'] {
+    @apply shadow-base;
+  }
+
+  .box1,
+  .box4,
+  .box7 {
+    height: calc(#{$galleryHeight} - 12px);
+  }
+
+  .box2,
+  .box3,
+  .box5,
+  .box6 {
+    height: calc(#{$galleryHeight} / 2 - 12px);
+  }
+}
+.swiper {
+  &-slide {
+    height: max-content;
+    margin-top: 12px;
+  }
+  &-button {
+    &-prev,
+    &-next {
+      &::after {
+        content: none;
+      }
+      @apply w-8 h-8 bg-white bg-no-repeat rounded-md shadow-base text-black;
+      @apply top-1/2;
+      @apply hover:bg-black transition-all;
+    }
+
+    &-prev {
+      left: -25px;
+      @screen sm {
+        left: -5%;
+      }
+    }
+
+    &-next {
+      right: -25px;
+      @screen sm {
+        right: -5%;
+      }
+    }
+
+    &-disabled {
+      @apply opacity-0 #{!important};
+    }
+  }
+}

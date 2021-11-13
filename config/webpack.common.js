@@ -24,6 +24,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css',
+      ignoreOrder: true,
     }),
 
     // Copies files from target to destination folder
@@ -60,17 +61,17 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: { importLoaders: 1 },
-          },
-          { loader: 'postcss-loader' },
-        ],
-      },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     {
+      //       loader: 'css-loader',
+      //       options: { importLoaders: 2 },
+      //     },
+      //     { loader: 'postcss-loader' },
+      //   ],
+      // },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,

@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Cities from './Cities'
 
 import Icon from '../Icon'
-import CityCard from 'components/PopularCity/CityCard'
+import CityCard from './CityCard'
 
 import SwiperCore, { Navigation, Grid } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -46,7 +46,7 @@ const PopularCity = () => {
   }
 
   return (
-    <div className='pb-10 lg:w-8/12 w-10/12 mx-auto'>
+    <div>
       <h4 className='flex items-center text-xl'>
         <Icon label='triangle' className='mr-3.5' />
         熱門城市

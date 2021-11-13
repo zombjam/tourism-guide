@@ -4,16 +4,17 @@
   &::before,
   &::after {
     content: '';
-    height: 60px;
-    background-position-x: -10px;
-    @apply absolute w-1/2 top-full -z-1 bg-bannerShadow bg-contain bg-no-repeat transform -translate-y-1/2;
+    filter: blur(4px);
+    @apply absolute bottom-0 w-1/2 h-12 -z-1 bg-black bg-opacity-30;
   }
 
   &::before {
-    @apply left-0;
+    transform: skew(-4deg) rotate(-4deg);
+    @apply left-2;
   }
 
   &::after {
-    @apply right-0 -scale-x-100;
+    transform: skew(4deg) rotate(4deg);
+    @apply right-2;
   }
 }

@@ -20,12 +20,3 @@
     @apply block;
   }
 }
-
-@media screen and (max-width: 576px) {
-  .banner-shadow {
-    &::before,
-    &::after {
-      background-position-y: 15px;
-    }
-  }
-}

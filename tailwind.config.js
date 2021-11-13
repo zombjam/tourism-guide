@@ -18,7 +18,6 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        bannerShadow: "url('/assets/icons/box-shadow.svg')",
         homeLogo: "url('/assets/images/home.svg')",
         homeBg: "url('/assets/images/homeBg.png')",
       },

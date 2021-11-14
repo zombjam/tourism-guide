@@ -4,6 +4,7 @@ module.exports = {
   purge: {
     enable: true,
     content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+    safelist: ['text-yellow'],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {

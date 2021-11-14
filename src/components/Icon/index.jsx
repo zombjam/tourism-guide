@@ -19,7 +19,7 @@ const Icon = ({ label, size, className, hasHover }) => {
       onMouseLeave={() => hasHover && setHover(false)}
     >
       <use
-        xlinkHref={`/assets/icons/sprite.svg#${label}${
+        xlinkHref={`./assets/icons/sprite.svg#${label}${
           hasHover ? (isHover ? '-hover' : '') : ''
         }`}
       ></use>

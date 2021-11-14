@@ -42,8 +42,8 @@ const SearchBar = () => {
       </div>
       <div className='mt-2 space-x-2 flex items-center justify-center'>
         <div className='flex-1 flex items-center space-x-2'>
-          <Select className='w-1/2' />
-          <Select className='w-1/2' />
+          <Select title='類別' className='w-1/2' />
+          <Select title='不分縣市' className='w-1/2' />
         </div>
         {/* <button
           type='button'

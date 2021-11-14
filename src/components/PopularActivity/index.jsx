@@ -5,8 +5,6 @@ import Activities from './Activities'
 
 import ActivityCard from './ActivityCard'
 
-console.log(Activities)
-
 const PopularActivity = () => {
   return (
     <div className='space-y-3'>

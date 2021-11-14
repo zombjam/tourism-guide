@@ -5,7 +5,7 @@ import { Banner } from 'components'
 const Traffic = () => (
   <Fragment>
     <Banner />
-    <div className='p-6'>Traffic Page work!</div>
+    <div className='p-6'></div>
   </Fragment>
 )
 

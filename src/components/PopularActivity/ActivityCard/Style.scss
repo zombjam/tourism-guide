@@ -1,0 +1,9 @@
+.desc {
+  display: none !important;
+}
+
+@screen lg {
+  .desc {
+    display: -webkit-box !important;
+  }
+}

@@ -1,0 +1,20 @@
+.banner-shadow {
+  @apply relative;
+
+  &::before,
+  &::after {
+    content: '';
+    filter: blur(4px);
+    @apply absolute bottom-0 w-1/2 h-12 -z-1 bg-black bg-opacity-30;
+  }
+
+  &::before {
+    transform: skew(-4deg) rotate(-4deg);
+    @apply left-2;
+  }
+
+  &::after {
+    transform: skew(4deg) rotate(4deg);
+    @apply right-2;
+  }
+}

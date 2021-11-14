@@ -1,0 +1,10 @@
+html,
+body {
+  @apply h-full;
+}
+body {
+  @apply bg-background;
+}
+#app {
+  @apply h-auto min-h-full relative;
+}
